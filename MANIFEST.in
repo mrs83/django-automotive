@@ -1,3 +1,4 @@
 include LICENSE
 include README.md
-recursive-include automotive/fixtures *
+include static/fixtures/*.json
+recursive-include automotive/static *

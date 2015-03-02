@@ -31,9 +31,13 @@ setup(
     license='UNLICENSE',
     packages=[
         'automotive',
+        'automotive.fixtures',
         'automotive.migrations',
         'automotive.south_migrations',
     ],
+    package_data = {
+        'automotive.fixtures': ['*.json',],
+    },
     install_requires=['Django>=1.5', 'django-autoslug'],
     classifiers=[
         "Development Status :: 3 - Alpha",
