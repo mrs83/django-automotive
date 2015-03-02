@@ -7,6 +7,9 @@ class Brand(models.Model):
     name = models.CharField(max_length=64)
     slug = AutoSlugField(populate_from='name')
 
+    class Meta:
+        ordering = ('name',)
+
     def __unicode__(self):
         return self.name
 
@@ -23,6 +26,9 @@ class Model(models.Model):
     year = models.PositiveSmallIntegerField(blank=True, null=True)
 
     objects = ModelManager()
+
+    class Meta:
+        ordering = ('brand__name', 'name')
 
     def save(self, *args, **kwargs):
         if not self.full_name:
