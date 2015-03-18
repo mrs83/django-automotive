@@ -33,12 +33,14 @@ setup(
         'automotive',
         'automotive.fixtures',
         'automotive.migrations',
+        'automotive.management',
+        'automotive.management.commands',
         'automotive.south_migrations',
     ],
     package_data = {
         'automotive.fixtures': ['*.json',],
     },
-    install_requires=['Django>=1.5', 'django-autoslug'],
+    install_requires=['Django>=1.5', 'django-autoslug', 'requests', 'progressbar'],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Web Environment",
